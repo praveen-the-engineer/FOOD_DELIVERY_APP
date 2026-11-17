@@ -1,8 +1,8 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 
+import API_BASE_URL from '../config/api';
 import { chatWithAI } from '../services/aiService';
 import './AIChat.css';
 
@@ -154,7 +154,7 @@ function AIChat() {
                 }
 
                 const response = await axios.post(
-                    'http://localhost:5000/api/ai/voice-command',
+                    `${API_BASE_URL}/api/ai/voice-command`,
                     {
                         message: userMessage
                     },

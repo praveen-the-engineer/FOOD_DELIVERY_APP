@@ -1,6 +1,7 @@
 import axios from 'axios';
+import API_BASE_URL from '../config/api';
 
-const API_URL = 'http://localhost:5000/api/payment';
+const API_URL = `${API_BASE_URL}/api/payment`;
 
 // Create Razorpay order
 export const createPaymentOrder = async (token) => {

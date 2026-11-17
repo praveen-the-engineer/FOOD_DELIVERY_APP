@@ -1,7 +1,8 @@
-
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+
+import API_BASE_URL from '../config/api';
 
 import { getAllFood } from '../services/foodService';
 import { addToCart } from '../services/cartService';
@@ -57,7 +58,7 @@ function FoodDetails() {
                 // Fetch content-based recommendations
                 try {
                     const response = await axios.get(
-                        `http://localhost:5000/api/recommendations/${id}`
+                        `${API_BASE_URL}/api/recommendations/${id}`
                     );
 
                     setRecommendations(
