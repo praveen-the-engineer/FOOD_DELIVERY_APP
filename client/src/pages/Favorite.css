@@ -1,0 +1,143 @@
+
+.favorite-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    min-height: 80vh;
+}
+
+.favorite-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.favorite-header h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.favorite-header p {
+    color: #777;
+    font-size: 15px;
+}
+
+.favorite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.favorite-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.favorite-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.favorite-details {
+    padding: 18px;
+}
+
+.favorite-details h3 {
+    font-size: 19px;
+    color: #222;
+    margin: 0 0 9px;
+}
+
+.favorite-details p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 40px;
+}
+
+.favorite-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.favorite-price {
+    font-size: 19px;
+    font-weight: 700;
+    color: #e85d04;
+}
+
+.remove-favorite-btn {
+    border: none;
+    background: #fff0f0;
+    color: #d62828;
+    padding: 9px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.remove-favorite-btn:hover {
+    background: #ffe0e0;
+}
+
+.remove-favorite-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.favorite-message,
+.empty-favorites {
+    text-align: center;
+    padding: 70px 20px;
+    color: #555;
+}
+
+.empty-favorites h2 {
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.empty-favorites p {
+    margin-bottom: 22px;
+}
+
+.favorite-home-btn {
+    display: inline-block;
+    background: #e85d04;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.favorite-home-btn:hover {
+    background: #d14f00;
+}
+
+@media (max-width: 600px) {
+    .favorite-page {
+        padding: 28px 16px;
+    }
+
+    .favorite-header h1 {
+        font-size: 26px;
+    }
+
+    .favorite-grid {
+        grid-template-columns: 1fr;
+    }
+}
